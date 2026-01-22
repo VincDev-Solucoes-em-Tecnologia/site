@@ -1,26 +1,27 @@
-import React from 'react';
-
 const Hero = () => {
   return (
     <section id="home" className="hero-section text-white">
       <div className="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         {/* Logo */}
-        <div className="mb-8 flex justify-center">
-          <img 
-            src="/vincdev-logo.jpeg" 
-            alt="VinCDEV Logo" 
+        {/* <div className="mb-8 flex justify-center">
+          <img
+            src="/vincdev_logo_2.png"
+            alt="VinCDEV Logo"
             className="h-24 w-auto floating-animation"
           />
-        </div>
+        </div> */}
 
         <h1 className="hero-title uppercase">VINCDEV</h1>
         <p className="hero-subtitle mb-8">Soluções em Tecnologia</p>
 
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-          Transformamos suas ideias em <span className="text-primary">soluções tecnológicas inovadoras</span>
+          Transformamos suas ideias em{" "}
+          <span className="text-primary">soluções tecnológicas inovadoras</span>
         </h2>
         <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-          Desenvolvemos sistemas e aplicativos de alta qualidade que impulsionam o crescimento do seu negócio com tecnologia de ponta e design excepcional.
+          Desenvolvemos sistemas e aplicativos de alta qualidade que impulsionam
+          o crescimento do seu negócio com tecnologia de ponta e design
+          excepcional.
         </p>
 
         {/* <div className="flex justify-center space-x-4">

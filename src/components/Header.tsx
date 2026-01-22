@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Início', href: '#home' },
-    { name: 'Sobre', href: '#about' },
+    { name: "Início", href: "#home" },
+    { name: "Sobre", href: "#about" },
     // { name: 'Serviços', href: '#services' },
     // { name: 'Portfólio', href: '#portfolio' },
     // { name: 'Contato', href: '#contact' },
@@ -18,14 +18,16 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo and Brand Name */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/vincdev-logo.jpeg" 
-              alt="VinCDEV Logo" 
+            <img
+              src="/vincdev_logo_2.png"
+              alt="VinCDEV Logo"
               className="h-10 w-auto"
             />
             <div className="text-white">
               <span className="text-xl font-bold tracking-wider">VINCDEV</span>
-              <p className="text-xs text-gray-400 uppercase tracking-widest">Soluções em Tecnologia</p>
+              <p className="text-xs text-gray-400 uppercase tracking-widest">
+                Soluções em Tecnologia
+              </p>
             </div>
           </div>
 
@@ -52,7 +54,11 @@ const Header = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <span className="sr-only">Open main menu</span>
-              {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
+              {isOpen ? (
+                <X className="block h-6 w-6" />
+              ) : (
+                <Menu className="block h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
