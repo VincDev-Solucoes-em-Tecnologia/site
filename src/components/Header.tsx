@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
-  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     // Se for uma âncora na página atual, apenas scroll
     if (href.startsWith("#")) {
       e.preventDefault();
@@ -21,7 +23,11 @@ const Header = () => {
   const navItems = [
     { name: "Início", href: "/", isAnchor: false },
     { name: "Sobre", href: "#about", isAnchor: true },
-    { name: "Política de Privacidade", href: "/politica-privacidade", isAnchor: false },
+    {
+      name: "Política de Privacidade",
+      href: "/politica-privacidade",
+      isAnchor: false,
+    },
   ];
 
   return (
@@ -29,7 +35,10 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo and Brand Name */}
-          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition">
+          <Link
+            to="/"
+            className="flex items-center space-x-3 hover:opacity-80 transition"
+          >
             <img
               src="/vincdev_logo_2.png"
               alt="VinCDEV Logo"
@@ -45,7 +54,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:space-x-8 items-center">
-            {navItems.map((item) => 
+            {navItems.map((item) =>
               item.isAnchor ? (
                 <a
                   key={item.name}
@@ -63,7 +72,7 @@ const Header = () => {
                 >
                   {item.name}
                 </Link>
-              )
+              ),
             )}
             <button className="btn-primary px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl transition duration-300">
               Fale Conosco
@@ -110,7 +119,7 @@ const Header = () => {
                 >
                   {item.name}
                 </Link>
-              )
+              ),
             )}
             <button className="btn-primary w-full mt-2 px-4 py-2 rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition duration-300">
               Fale Conosco
