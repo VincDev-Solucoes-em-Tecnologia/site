@@ -1,4 +1,16 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <footer className="footer py-10 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,20 +45,29 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#home"
+                <Link
+                  to="/"
                   className="text-gray-400 hover:text-white transition duration-150"
                 >
                   Início
-                </a>
+                </Link>
               </li>
               <li>
                 <a
                   href="#about"
-                  className="text-gray-400 hover:text-white transition duration-150"
+                  onClick={(e) => handleAnchorClick(e, "#about")}
+                  className="text-gray-400 hover:text-white transition duration-150 cursor-pointer"
                 >
                   Sobre
                 </a>
+              </li>
+              <li>
+                <Link
+                  to="/politica-privacidade"
+                  className="text-gray-400 hover:text-white transition duration-150"
+                >
+                  Política de Privacidade
+                </Link>
               </li>
               {/* <li><a href="#services" className="text-gray-400 hover:text-white transition duration-150">Serviços</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-white transition duration-150">Contato</a></li> */}
@@ -62,7 +83,8 @@ const Footer = () => {
               <li>
                 <a
                   href="#services"
-                  className="text-gray-400 hover:text-white transition duration-150"
+                  onClick={(e) => handleAnchorClick(e, "#services")}
+                  className="text-gray-400 hover:text-white transition duration-150 cursor-pointer"
                 >
                   Desenvolvimento Web
                 </a>
@@ -70,7 +92,8 @@ const Footer = () => {
               <li>
                 <a
                   href="#services"
-                  className="text-gray-400 hover:text-white transition duration-150"
+                  onClick={(e) => handleAnchorClick(e, "#services")}
+                  className="text-gray-400 hover:text-white transition duration-150 cursor-pointer"
                 >
                   Aplicativos Mobile
                 </a>
@@ -78,7 +101,8 @@ const Footer = () => {
               <li>
                 <a
                   href="#services"
-                  className="text-gray-400 hover:text-white transition duration-150"
+                  onClick={(e) => handleAnchorClick(e, "#services")}
+                  className="text-gray-400 hover:text-white transition duration-150 cursor-pointer"
                 >
                   Consultoria
                 </a>
