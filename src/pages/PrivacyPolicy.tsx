@@ -102,6 +102,14 @@ const PrivacyPolicy = () => {
                 <span className="text-primary mr-3">•</span>
                 <span>Detectar, prevenir e resolver questões técnicas</span>
               </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3">•</span>
+                <span>
+                  <strong>Importante:</strong> Não utilizamos seus dados para
+                  rastreamento publicitário (Tracking) ou venda de informações
+                  para corretores de dados.
+                </span>
+              </li>
             </ul>
           </section>
 
@@ -152,6 +160,53 @@ const PrivacyPolicy = () => {
                 </span>
               </li>
             </ul>
+          </section>
+
+          {/* Inserir logo após a Section 4 e antes da Section 5 */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4 text-primary">
+              4.1. Serviços de Terceiros e SDKs
+            </h2>
+            <div className="text-gray-300 space-y-4">
+              <p>
+                Para o funcionamento correto do aplicativo, utilizamos serviços
+                de terceiros que podem coletar informações utilizadas para
+                identificá-lo. Abaixo estão os links para as políticas de
+                privacidade dos provedores de serviços terceirizados utilizados
+                pelo aplicativo:
+              </p>
+              <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-blue-500">
+                <h3 className="font-semibold mb-3 text-white">
+                  Google Firebase
+                </h3>
+                <p className="mb-2">
+                  Utilizamos o <strong>Firebase Authentication</strong> para
+                  gerenciamento de identidade e login seguro, e o{" "}
+                  <strong>Firebase Crashlytics</strong> para monitoramento de
+                  estabilidade e erros.
+                </p>
+                <ul className="list-disc list-inside space-y-1 text-sm text-gray-400">
+                  <li>
+                    Coleta de e-mail e identificadores de usuário para
+                    autenticação.
+                  </li>
+                  <li>
+                    Coleta de logs de falhas (Crashlytics) para correção de
+                    bugs.
+                  </li>
+                  <li>
+                    <a
+                      href="https://firebase.google.com/policies/analytics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      Política de Privacidade do Google Firebase
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           {/* Section 5 */}
